@@ -37,6 +37,8 @@ function Register() {
             <h2 className="text-center mb-4">Sign Up</h2>
             {message && <div className="alert alert-danger">{message}</div>}
             <form onSubmit={handleRegister}>
+
+              {/* Username Field */}
               <div className="form-group">
                 <label htmlFor="username">Username</label>
                 <input
@@ -49,6 +51,8 @@ function Register() {
                   required
                 />
               </div>
+
+              {/* First Name Field */}
               <div className="form-group">
                 <label htmlFor="firstName">First Name</label>
                 <input
@@ -61,6 +65,8 @@ function Register() {
                   required
                 />
               </div>
+
+              {/* Last Name Field */}
               <div className="form-group">
                 <label htmlFor="lastName">Last Name</label>
                 <input
@@ -73,6 +79,8 @@ function Register() {
                   required
                 />
               </div>
+
+              {/* Email Field */}
               <div className="form-group">
                 <label htmlFor="email">Email</label>
                 <input
@@ -85,6 +93,8 @@ function Register() {
                   required
                 />
               </div>
+
+              {/* Password Field */}
               <div className="form-group">
                 <label htmlFor="password">Password</label>
                 <input
@@ -97,9 +107,12 @@ function Register() {
                   required
                 />
               </div>
+
+              {/* Register Button */}
               <button type="submit" className="btn btn-dark btn-block mt-3">
                 Register
               </button>
+
             </form>
             <p className="text-center mt-3">
               Already have an account? <a href="/login">Login here</a>
