@@ -13,7 +13,13 @@ function Register() {
     const response = await fetch("/djangoapp/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username, first_name: firstName, last_name: lastName, email, password }),
+      body: JSON.stringify({
+        userName: username,
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: password,
+      }),
     });
     const data = await response.json();
     if (data.status === "Authenticated") {
@@ -32,8 +38,9 @@ function Register() {
             {message && <div className="alert alert-danger">{message}</div>}
             <form onSubmit={handleRegister}>
               <div className="form-group">
-                <label>Username</label>
+                <label htmlFor="username">Username</label>
                 <input
+                  id="username"
                   type="text"
                   className="form-control"
                   placeholder="Enter username"
@@ -43,8 +50,9 @@ function Register() {
                 />
               </div>
               <div className="form-group">
-                <label>First Name</label>
+                <label htmlFor="firstName">First Name</label>
                 <input
+                  id="firstName"
                   type="text"
                   className="form-control"
                   placeholder="Enter first name"
@@ -54,8 +62,9 @@ function Register() {
                 />
               </div>
               <div className="form-group">
-                <label>Last Name</label>
+                <label htmlFor="lastName">Last Name</label>
                 <input
+                  id="lastName"
                   type="text"
                   className="form-control"
                   placeholder="Enter last name"
@@ -65,19 +74,21 @@ function Register() {
                 />
               </div>
               <div className="form-group">
-                <label>Email</label>
+                <label htmlFor="email">Email</label>
                 <input
+                  id="email"
                   type="email"
                   className="form-control"
-                  placeholder="Enter email"
+                  placeholder="Enter email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
               </div>
               <div className="form-group">
-                <label>Password</label>
+                <label htmlFor="password">Password</label>
                 <input
+                  id="password"
                   type="password"
                   className="form-control"
                   placeholder="Enter password"
@@ -91,7 +102,7 @@ function Register() {
               </button>
             </form>
             <p className="text-center mt-3">
-              Already have an account? <a href="/login">Login</a>
+              Already have an account? <a href="/login">Login here</a>
             </p>
           </div>
         </div>
