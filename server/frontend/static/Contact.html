@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/style.css">
     <style>
+        body { font-family: 'Segoe UI', sans-serif; }
         .navbar-brand { font-weight: 700; font-size: 1.4rem; }
-        .contact-img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 16px; }
-        .contact-card { border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+        .nav-item.active .nav-link { color: #ffc107 !important; font-weight: 600; }
+        .contact-img { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; margin-bottom: 16px; }
+        .contact-card { border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: none; }
+        .icon-box { width: 40px; height: 40px; background: #212529; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; margin-right: 12px; flex-shrink: 0; }
+        .contact-item { display: flex; align-items: center; margin-bottom: 14px; }
     </style>
 </head>
 <body>
@@ -22,45 +26,75 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
-            <li class="nav-item active"><a class="nav-link active" href="/contact">Contact Us <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item active"><a class="nav-link" href="/contact">Contact Us <span class="sr-only">(current)</span></a></li>
         </ul>
     </div>
 </nav>
 
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
     <h1 class="text-center mb-2">Contact Us</h1>
     <p class="text-center text-muted mb-5">We'd love to hear from you. Reach out to us anytime.</p>
 
     <div class="row">
         <div class="col-md-6 mb-4">
             <div class="card contact-card p-4">
-                <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" class="contact-img" alt="Headquarters">
-                <h4>Headquarters</h4>
-                <p><strong>Address:</strong> 123 Auto Drive, Chicago, IL 60601</p>
-                <p><strong>Phone:</strong> +1 (312) 555-0100</p>
-                <p><strong>Email:</strong> <a href="mailto:info@bestcars.com">info@bestcars.com</a></p>
-                <p><strong>Hours:</strong> Mon-Sat 9AM - 8PM, Sun 10AM - 6PM</p>
+                <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80"
+                     class="contact-img" alt="Best Cars Dealership Headquarters">
+                <h4 class="mb-3">Our Headquarters</h4>
+                <div class="contact-item">
+                    <div class="icon-box">ðŸ“</div>
+                    <div>
+                        <strong>Address</strong><br>
+                        123 Auto Drive, Chicago, IL 60601, USA
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon-box">ðŸ“ž</div>
+                    <div>
+                        <strong>Phone</strong><br>
+                        +1 (312) 555-0100
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon-box">âœ‰ï¸</div>
+                    <div>
+                        <strong>Email</strong><br>
+                        <a href="mailto:info@bestcars.com">info@bestcars.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon-box">ðŸ•</div>
+                    <div>
+                        <strong>Business Hours</strong><br>
+                        Monâ€“Sat: 9AM â€“ 8PM | Sun: 10AM â€“ 6PM
+                    </div>
+                </div>
             </div>
         </div>
+
         <div class="col-md-6 mb-4">
             <div class="card contact-card p-4">
-                <h4>Send us a Message</h4>
+                <h4 class="mb-3">Send Us a Message</h4>
                 <form>
                     <div class="form-group">
-                        <label>Your Name</label>
-                        <input type="text" class="form-control" placeholder="Enter your name">
+                        <label for="name">Your Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your full name">
                     </div>
                     <div class="form-group">
-                        <label>Email Address</label>
-                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
                     </div>
                     <div class="form-group">
-                        <label>Phone Number</label>
-                        <input type="tel" class="form-control" placeholder="Enter your phone number">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
                     </div>
                     <div class="form-group">
-                        <label>Message</label>
-                        <textarea class="form-control" rows="4" placeholder="Your message..."></textarea>
+                        <label for="subject">Subject</label>
+                        <input type="text" class="form-control" id="subject" placeholder="How can we help?">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Your message..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-dark btn-block">Send Message</button>
                 </form>
@@ -72,25 +106,25 @@
         <div class="col-md-4 mb-3">
             <div class="card contact-card p-3 text-center">
                 <h5>Sales Department</h5>
-                <p class="text-muted small">New & Used Vehicles</p>
+                <p class="text-muted small">New &amp; Used Vehicles</p>
                 <p><a href="mailto:sales@bestcars.com">sales@bestcars.com</a></p>
-                <p>+1 (312) 555-0101</p>
+                <p class="mb-0">+1 (312) 555-0101</p>
             </div>
         </div>
         <div class="col-md-4 mb-3">
             <div class="card contact-card p-3 text-center">
                 <h5>Service Department</h5>
-                <p class="text-muted small">Maintenance & Repairs</p>
+                <p class="text-muted small">Maintenance &amp; Repairs</p>
                 <p><a href="mailto:service@bestcars.com">service@bestcars.com</a></p>
-                <p>+1 (312) 555-0102</p>
+                <p class="mb-0">+1 (312) 555-0102</p>
             </div>
         </div>
         <div class="col-md-4 mb-3">
             <div class="card contact-card p-3 text-center">
                 <h5>Finance Department</h5>
-                <p class="text-muted small">Loans & Leasing</p>
+                <p class="text-muted small">Loans &amp; Leasing</p>
                 <p><a href="mailto:finance@bestcars.com">finance@bestcars.com</a></p>
-                <p>+1 (312) 555-0103</p>
+                <p class="mb-0">+1 (312) 555-0103</p>
             </div>
         </div>
     </div>
