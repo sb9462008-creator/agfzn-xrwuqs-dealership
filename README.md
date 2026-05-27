@@ -1,6 +1,8 @@
 # agfzn-xrwuqs-dealership
 
-## Project Name: Full Stack Cars Dealership Application
+## Project Name: Best Cars Dealership - Full Stack Web Application
+
+### Repository Name: agfzn-xrwuqs-dealership
 
 ## Description
 
@@ -46,8 +48,3 @@ pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 ```
-
-## Deployment
-
-Deployed on IBM Cloud Code Engine at:
-https://agfzn-xrwuqs-dealership.1a2b3c4d5e.us-south.codeengine.appdomain.cloud
