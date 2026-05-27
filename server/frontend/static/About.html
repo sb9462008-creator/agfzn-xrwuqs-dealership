@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Best Cars Dealership</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        .team-card { border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); margin-bottom: 24px; }
+        .team-img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 20px auto; display: block; }
+        .navbar-brand { font-weight: 700; font-size: 1.4rem; }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Best Cars Dealership</a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item active"><a class="nav-link" href="/about">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-2">About Us</h1>
+    <p class="text-center text-muted mb-5">Meet the team behind Best Cars Dealership</p>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card team-card text-center p-3">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="team-img" alt="John Smith">
+                <h5>John Smith</h5>
+                <p class="text-primary">CEO & Founder</p>
+                <p class="text-muted small">John has over 20 years of experience in the automotive industry. He founded Best Cars Dealership with a vision to make car buying simple and transparent.</p>
+                <p><a href="mailto:john.smith@bestcars.com">john.smith@bestcars.com</a></p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card team-card text-center p-3">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" class="team-img" alt="Sarah Johnson">
+                <h5>Sarah Johnson</h5>
+                <p class="text-primary">Head of Sales</p>
+                <p class="text-muted small">Sarah leads our nationwide sales team with 15 years of experience. She is dedicated to helping customers find their perfect vehicle at the best price.</p>
+                <p><a href="mailto:sarah.johnson@bestcars.com">sarah.johnson@bestcars.com</a></p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card team-card text-center p-3">
+                <img src="https://randomuser.me/api/portraits/men/65.jpg" class="team-img" alt="Michael Chen">
+                <h5>Michael Chen</h5>
+                <p class="text-primary">CTO</p>
+                <p class="text-muted small">Michael oversees all technology operations. He built our digital platform using modern web technologies to deliver the best online car shopping experience.</p>
+                <p><a href="mailto:michael.chen@bestcars.com">michael.chen@bestcars.com</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
